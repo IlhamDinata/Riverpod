@@ -76,7 +76,8 @@ class SignUpWidget extends StatelessWidget {
               style: medium.copyWith(color: MyColors.primaryThreeElementText),
             ),
           ),
-          const Expanded(child: SizedBox.shrink()),
+          // const Expanded(child: SizedBox.shrink()),
+          70.verticalSpace,
           CustomButtonWidth(
             onTap: () {},
             width: Dimens(context).size.width,
