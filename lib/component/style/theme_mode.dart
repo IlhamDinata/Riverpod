@@ -1,18 +1,17 @@
-
 import 'package:flutter/material.dart';
 
 class Themes {
   static final lightTheme = ThemeData(
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.grey.shade100,
-    appBarTheme:  AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: Colors.grey.shade50,
       titleTextStyle: const TextStyle(color: Colors.black, fontSize: 12),
       centerTitle: false,
     ),
     primarySwatch: Colors.deepOrange,
     fontFamily: 'PlusJakartaSans',
-    iconTheme:  IconThemeData(color: Colors.grey.shade700),
+    iconTheme: IconThemeData(color: Colors.grey.shade700),
   );
 
   static final darkTheme = ThemeData(

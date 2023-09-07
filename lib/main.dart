@@ -1,23 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/component/providers/theme_provider.dart';
+import 'package:helloworld/component/style/theme_mode.dart';
 import 'package:helloworld/screen/introduction/view/introduction_page.dart';
+import 'package:helloworld/screen/login/view/login_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+  Widget build(BuildContext context, WidgetRef ref) {
+    final darkMode = ref.watch(darkModeProvider);
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: Themes.lightTheme,
+        themeMode: darkMode ? ThemeMode.dark : ThemeMode.light,
+        darkTheme: Themes.darkTheme,
+        initialRoute: "/",
+        routes: {
+          "/": (context) => const IntroductionPage(),
+          "/signIn": (context) => const LoginPage(),
+        },
+        //home: const IntroductionPage(),
       ),
-      home: const IntroductionPage(),
     );
   }
 }

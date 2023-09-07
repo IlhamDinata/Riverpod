@@ -39,6 +39,7 @@ class _IntroductionWidgetState extends State<IntroductionWidget> {
                     title: 'First See Learning',
                     subTitle:
                         'Forget about of paper, now learning all in one place'),
+                        
                 introductionViewMobile(
                     assets: 'assets/images/man.png',
                     title: 'Connect With Everyone',
@@ -91,11 +92,11 @@ class _IntroductionWidgetState extends State<IntroductionWidget> {
                     style: medium,
                   ),
                 ),
-                
                 SmoothPageIndicator(controller: pageController, count: 3),
                 onLastIntroPage
                     ? GestureDetector(
                         onTap: () {
+                        
                           Navigator.push(
                               context,
                               PageTransition(
