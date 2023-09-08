@@ -5,10 +5,12 @@ import 'package:helloworld/component/providers/theme_provider.dart';
 import 'package:helloworld/component/style/mycolors.dart';
 import 'package:helloworld/component/style/mytext.dart';
 import 'package:helloworld/component/utils/dimens.dart';
+import 'package:helloworld/component/widget/bottom_navbar.dart';
 import 'package:helloworld/component/widget/custom_appbar.dart';
 import 'package:helloworld/component/widget/custom_button.dart';
 import 'package:helloworld/component/widget/social_media_sign.dart';
 import 'package:helloworld/component/widget/text_field.dart';
+import 'package:helloworld/screen/home/view/home_page.dart';
 import 'package:helloworld/screen/signup/view/signup_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:page_transition/page_transition.dart';
@@ -81,9 +83,15 @@ Widget loginScreen(
             ),
           ),
           // const Expanded(child: SizedBox()),
-          200.verticalSpace,
+          195.verticalSpace,
           CustomButtonWidth(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      child: const BottomNavBar(),
+                      type: PageTransitionType.fade));
+            },
             width: Dimens(context).size.width,
             backgroundColor: MyColors.primaryElement,
             buttonText: "Login",

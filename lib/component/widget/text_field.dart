@@ -63,3 +63,60 @@ Widget customTextField({
     ),
   );
 }
+
+Widget textFormField({
+  TextEditingController? controller,
+  TextInputType? textInputType,
+  bool obscureText = false,
+  Function(String)? onChanged,
+  String? Function(String?)? validator,
+  String? hintText,
+  Widget? prefixIcon,
+  Widget? suffixIcon,
+  String? labelText,
+  String? errorText,
+}) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 25),
+    child: TextFormField(
+      controller: controller,
+      onChanged: onChanged,
+      keyboardType: textInputType,
+      obscureText: obscureText,
+      maxLines: 1,
+      validator: validator,
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: medium,
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        labelText: labelText,
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: MyColors.primaryFourElementText),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(width: 1),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: Colors.red),
+        ),
+        // errorText: errorText,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: MyColors.primaryFourElementText),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: Colors.red),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: MyColors.primaryFourElementText),
+        ),
+      ),
+    ),
+  );
+}

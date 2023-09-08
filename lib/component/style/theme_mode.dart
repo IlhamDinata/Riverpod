@@ -12,6 +12,12 @@ class Themes {
     primarySwatch: Colors.deepOrange,
     fontFamily: 'PlusJakartaSans',
     iconTheme: IconThemeData(color: Colors.grey.shade700),
+    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    //   backgroundColor: Colors.grey.shade100,
+    //   unselectedIconTheme: 
+    //   selectedIconTheme: ,
+    //   elevation: 0.1,
+    // ),
   );
 
   static final darkTheme = ThemeData(

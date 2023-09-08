@@ -1,0 +1,15 @@
+{
+    "language": "English",
+    "@language": {
+        "description": "The Current Language"
+    },
+    "signIn": "Sign In",
+    "@signIn": {
+        "description": "Sign In Text"
+    },
+    "signUp": "Sign Up",
+    "@signUp": {
+        "description": "Sign Up Text"
+    }
+
+}

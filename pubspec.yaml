@@ -46,6 +46,12 @@ dependencies:
   zoom_tap_animation: ^1.1.0
   flutter_screenutil: ^5.9.0
   phosphor_flutter: ^2.0.0
+  google_nav_bar: ^5.0.6
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.1
+  flutter_gen: ^5.3.1
+  applocale: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +69,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

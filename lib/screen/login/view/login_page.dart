@@ -11,8 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: ResponsiveLayout(
-        mobileScaffold:
-            LoginWidget(isMobile: true),
+        mobileScaffold: LoginPageMobile(),
         tabletScaffold: LoginPageTablet(),
       ),
     );
