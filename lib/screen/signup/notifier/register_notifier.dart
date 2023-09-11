@@ -8,4 +8,20 @@ class RegisterNotifier extends _$RegisterNotifier {
   RegisterState build() {
     return RegisterState();
   }
+
+  void onUsernameChange(String name) {
+    state = state.copyWith(username: name);
+  }
+
+  void onEmailChange(String email) {
+    state = state.copyWith(email: email);
+  }
+
+  void onPasswordChange(String password) {
+    state = state.copyWith(password: password);
+  }
+
+  void onRePasswordChange(String password) {
+    state = state.copyWith(rePassword: password);
+  }
 }

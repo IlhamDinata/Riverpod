@@ -7,27 +7,37 @@ import 'package:helloworld/component/utils/dimens.dart';
 import 'package:helloworld/component/widget/custom_appbar.dart';
 import 'package:helloworld/component/widget/custom_button.dart';
 import 'package:helloworld/component/widget/text_field.dart';
-import 'package:helloworld/screen/home/view/home_page.dart';
+import 'package:helloworld/screen/signup/notifier/register_controller.dart';
 import 'package:helloworld/screen/signup/notifier/register_notifier.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 // ignore: must_be_immutable
-class SignUpWidget extends ConsumerWidget {
-  SignUpWidget({super.key, this.isMobile = false});
+class RegisterWidget extends ConsumerStatefulWidget {
+  RegisterWidget({super.key, this.isMobile = false});
 
   final bool? isMobile;
 
-  TextEditingController emailController = TextEditingController();
+  @override
+  ConsumerState<RegisterWidget> createState() => _RegisterWidgetState();
+}
+
+class _RegisterWidgetState extends ConsumerState<RegisterWidget> {
+  // TextEditingController emailController = TextEditingController();
+  late RegisterController _controller;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  void initState() {
+    _controller = RegisterController(ref: ref);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final regProvider = ref.watch(registerNotifierProvider);
     return Scaffold(
       appBar: customAppBar(
         title: "signUp".tr(),
-        child: const SizedBox.shrink(),
         centerTitle: true,
         leading: false,
         // iconLeading: ZoomTapAnimation(
@@ -45,12 +55,17 @@ class SignUpWidget extends ConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "Enter your details below & free sign up",
+                "TitleRegister".tr(),
                 style: medium.copyWith(color: MyColors.primaryThreeElementText),
               ),
             ),
             35.verticalSpace,
             customTextField(
+                onChanged: (value) {
+                  ref
+                      .read(registerNotifierProvider.notifier)
+                      .onUsernameChange(value);
+                },
                 context: context,
                 title: "Username",
                 textInputType: TextInputType.name,
@@ -64,21 +79,38 @@ class SignUpWidget extends ConsumerWidget {
             //     prefixIcon: PhosphorIcon(PhosphorIcons.regular.user),
             //     errorText: "Email Can't Empty"),
             customTextField(
+                onChanged: (value) {
+                  ref
+                      .read(registerNotifierProvider.notifier)
+                      .onEmailChange(value);
+                },
                 context: context,
                 title: "Email",
                 textInputType: TextInputType.emailAddress,
                 phosphorIconData: PhosphorIcons.regular.user,
-                hintText: "Enter your email address"),
+                hintText: "enterEmail".tr()),
             20.verticalSpace,
             customTextField(
+                onChanged: (value) {
+                  ref
+                      .read(registerNotifierProvider.notifier)
+                      .onPasswordChange(value);
+                },
                 context: context,
                 title: "Password",
+                obscureText: true,
                 textInputType: TextInputType.text,
                 phosphorIconData: PhosphorIcons.regular.lock,
-                hintText: "Enter your Password"),
+                hintText: "enterPassword".tr()),
             20.verticalSpace,
             customTextField(
+                onChanged: (value) {
+                  ref
+                      .read(registerNotifierProvider.notifier)
+                      .onRePasswordChange(value);
+                },
                 context: context,
+                obscureText: true,
                 title: "Confirm Password",
                 textInputType: TextInputType.name,
                 phosphorIconData: PhosphorIcons.regular.lock,
@@ -95,11 +127,12 @@ class SignUpWidget extends ConsumerWidget {
             64.verticalSpace,
             CustomButtonWidth(
               onTap: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        child: const HomePage(),
-                        type: PageTransitionType.fade));
+                // Navigator.push(
+                //     context,
+                //     PageTransition(
+                //         child: const HomePage(),
+                //         type: PageTransitionType.fade));
+                _controller.handleSignUp();
               },
               width: Dimens(context).size.width,
               backgroundColor: MyColors.primaryElement,

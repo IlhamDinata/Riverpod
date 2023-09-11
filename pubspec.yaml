@@ -53,6 +53,7 @@ dependencies:
   flutter_gen: ^5.3.1
   applocale: ^2.0.1
   easy_localization: ^3.0.3
+  svg_flutter: ^0.0.1
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +85,7 @@ flutter:
     - assets/images/
     - assets/voice/
     - assets/localization/
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

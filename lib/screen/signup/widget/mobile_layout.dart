@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/screen/signup/widget/signup.dart';
+import 'package:helloworld/screen/signup/widget/register.dart';
 
 class SignUpPageMobile extends StatelessWidget {
   const SignUpPageMobile({super.key});
@@ -7,7 +7,7 @@ class SignUpPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: SignUpWidget(isMobile: true),
+      body: RegisterWidget(isMobile: true),
     );
   }
 }

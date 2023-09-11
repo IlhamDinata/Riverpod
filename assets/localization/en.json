@@ -1,10 +1,46 @@
 {
-    "greeting" : "Hello World",
-    "name" : "My name is {}. I live in {}.",
+    "greeting" : "Hello {}",
     "signIn" : "Sign In",
     "signUp" : "Sign Up",
-    "character" : {
-        "male" : "The main character is good",
-        "female" : "The main character is good for actress"
-    }
+    "signInOption" : "Or use your email account to login",
+    "email" : "Enter your email address",
+    "password" : "Enter your password",
+    "forgotPassword" : "Forgot Password ?",
+    "TitleRegister" : "Enter your details below & free sign up",
+
+    "infoLang" : "English",
+
+    "welcome": "Welcome {}",
+ 
+  
+    "enterEmail" : "Enter your email address",
+    "enterPassword" : "Enter your password",
+ 
+
+    "home" : "Home",
+    "explore" : "Explore",
+    "reward" : "Reward",
+    "account" : "Account",
+
+    "titleRegister" : "Register",
+    "selectPhoto" : "Select A Photo",
+    "personalData" : "Personal Data",
+    "fullName" : "Full Name",
+    "enterFullName" : "Enter Your Full Name",
+    "phoneNumber" : "Phone Number",
+    "enterPhoneNumber" : "Enter Your Phone Number",
+    "clubName" : "Club Name",
+    "enterClubName" : "Enter Club Name",
+    "birthDay" : "Birth Day",
+    "gender" : "Gender",
+    "male" : "Male",
+    "female:" : "Female",
+  
+    "address" : "Address",
+    "province" : "Province",
+    "chooseProvince" : "Choose Province",
+    "district" : "District",
+    "city" : "City",
+    "chooseCity" : "Choose District/City",
+    "enterAddress" : "Enter Your Address"
 }

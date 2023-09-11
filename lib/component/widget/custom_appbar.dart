@@ -8,7 +8,7 @@ AppBar customAppBar(
     bool? centerTitle = false,
     bool leading = true,
     Widget? iconLeading,
-    required Widget child,
+    List<Widget>? child,
     Function()? iconTap}) {
   return AppBar(
     automaticallyImplyLeading: leading,
@@ -25,11 +25,11 @@ AppBar customAppBar(
       style: large,
     ),
     centerTitle: centerTitle,
-    actions: [
-      ZoomTapAnimation(
-        onTap: iconTap,
-        child: child,
-      ),
-    ],
+    actions: child,
+      // ZoomTapAnimation(
+      //   onTap: iconTap,
+      //   child: child,
+      // ),
+    
   );
 }

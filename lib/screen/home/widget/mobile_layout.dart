@@ -6,6 +6,6 @@ class HomePageMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomeWidget(isMobile: true);
+    return  HomeWidget(isMobile: true);
   }
 }

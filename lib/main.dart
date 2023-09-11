@@ -2,12 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:helloworld/component/providers/theme_provider.dart';
 import 'package:helloworld/component/style/theme_mode.dart';
-import 'package:helloworld/l10n/l10n.dart';
+
 import 'package:helloworld/screen/introduction/view/introduction_page.dart';
 import 'package:helloworld/screen/login/view/login_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,9 @@ void main() async {
       ],
       path: 'assets/localization',
       startLocale: const Locale('id'),
-      child: const ProviderScope(child: MyApp())));
+      child: const ProviderScope(
+        child: MyApp(),
+      )));
 }
 
 class MyApp extends ConsumerWidget {
@@ -45,6 +47,7 @@ class MyApp extends ConsumerWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
+
         // supportedLocales: L10n.all,
         // locale: const Locale('id'),
         // localizationsDelegates: const [

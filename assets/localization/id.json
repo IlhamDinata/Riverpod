@@ -1,10 +1,48 @@
 {
-    "greeting" : "Halo Dunia",
-    "name" : "My name is {}. I live in {}.",
+    "greeting" : "Halo {}",
     "signIn" : "Masuk",
     "signUp" : "Daftar",
-    "character" : {
-        "male" : "The main character is good",
-        "female" : "The main character is good for actress"
-    }
+    "signInOption" : "Atau menggunakan email anda untuk login",
+    "email" : "Masukkan alamat email anda",
+    "password" : "Masukkan password anda",
+    "forgotPassword" : "Lupa Kata Sandi ?",
+    "TitleRegister" : "Masukkan detail Anda di bawah ini dan daftar secara gratis", 
+
+    "welcome": "Selamat Datang {}",
+
+    "infoLang" : "Indonesia",
+   
+   
+    "enterEmail": "Masukkan alamat email anda",
+    "enterPassword": "Masukkan password anda",
+
+
+    "home": "Beranda",
+    "explore": "Jelajahi",
+    "reward": "Hadiah",
+    "account": "Akun",
+
+    "titleRegister": "Registrasi",
+    "selectPhoto": "Pilih Foto",
+    "personalData": "Data Diri",
+    "fullName": "Nama Lengkap",
+    "enterFullName": "Masukkan Nama Lengkap Anda",
+    "phoneNumber": "Nomor Handphone",
+    "enterPhoneNumber": "Masukkan Nomor Handphone Anda",
+    "clubName": "Nama Klub",
+    "enterClubName": "Masukkan Nama Klub Anda",
+    "birthDay": "Tanggal Lahir",
+    "gender": "Jenis Kelamin",
+    "male": "Laki-laki",
+    "female": "Perempuan",
+
+    "address": "Alamat",
+    "province": "Provinsi",
+    "chooseProvince": "Pilih Provinsi",
+    "district": "Kabupaten",
+    "city": "Kota",
+    "chooseCity": "Pilih Kabupaten/Kota",
+    "enterAddress": "Masukkan Alamat Anda"
+
+    
 }

@@ -13,6 +13,7 @@ Widget customTextField({
   bool obscureText = false,
   required PhosphorIconData phosphorIconData,
   String hintText = "",
+  Function(String)? onChanged,
 }) {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -51,7 +52,7 @@ Widget customTextField({
                     hintText: hintText,
                     hintStyle: medium,
                   ),
-                  onChanged: (value) {},
+                  onChanged: onChanged,
                   maxLines: 1,
                   autocorrect: false,
                 ),
