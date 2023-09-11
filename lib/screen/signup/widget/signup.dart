@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:helloworld/component/style/mycolors.dart';
@@ -25,7 +26,7 @@ class SignUpWidget extends ConsumerWidget {
     final regProvider = ref.watch(registerNotifierProvider);
     return Scaffold(
       appBar: customAppBar(
-        title: "Sign Up",
+        title: "signUp".tr(),
         child: const SizedBox.shrink(),
         centerTitle: true,
         leading: false,

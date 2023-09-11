@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:helloworld/component/providers/theme_provider.dart';
@@ -34,7 +35,7 @@ Widget loginScreen(
 ) {
   return Scaffold(
     appBar: customAppBar(
-      title: "Log In",
+      title: "signIn".tr(),
       leading: false,
       centerTitle: true,
       child: ref.watch(darkModeProvider)
@@ -89,8 +90,7 @@ Widget loginScreen(
               Navigator.push(
                   context,
                   PageTransition(
-                      child: const BottomNavBar(),
-                      type: PageTransitionType.fade));
+                      child: const HomePage(), type: PageTransitionType.fade));
             },
             width: Dimens(context).size.width,
             backgroundColor: MyColors.primaryElement,

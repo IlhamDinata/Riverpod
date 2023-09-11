@@ -1,0 +1,10 @@
+{
+    "greeting" : "Halo Dunia",
+    "name" : "My name is {}. I live in {}.",
+    "signIn" : "Masuk",
+    "signUp" : "Daftar",
+    "character" : {
+        "male" : "The main character is good",
+        "female" : "The main character is good for actress"
+    }
+}
